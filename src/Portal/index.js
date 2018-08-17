@@ -14,10 +14,10 @@ const Container = styled.div`
 
 const Popup = styled.div`
   position: absolute;
-  width: 200px;
-  height: 100px;
-  top: 45vh;
-  left: 50%;
+  width: 150px;
+  height: 150px;
+  top: 100px;
+  left: 100px;
   background: red;
   display: ${({ visible }) => !visible && "none"};
 `;
@@ -48,11 +48,13 @@ class Portal extends React.Component {
     return [
       <Container>
         <Button onClick={this.toogle1}>Click Me 1</Button>
-        <Popup visible={visiblePopup1} />
+        200x200
+        <Popup visible={visiblePopup1}>150x150</Popup>
       </Container>,
       <Container>
         <Button onClick={this.toogle2}>Click Me 2</Button>
-        <PortalPopup visible={visiblePopup2} />
+        200x200
+        <PortalPopup visible={visiblePopup2}>150x150</PortalPopup>
       </Container>
     ];
   }
